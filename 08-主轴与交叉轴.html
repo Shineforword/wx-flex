@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>主轴与交叉轴</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      article {
+        border: solid 5px silver;
+        width: 450px;
+        height: 250px;
+        display: flex;
+        /* 组合属性 */
+        flex-flow: column wrap;
+      }
+      article * {
+        width: 100px;
+        height: 100px;
+        background: blueviolet;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: border-box;
+        color: white;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 排列方式不同主轴也是不同(水平排列主轴水平 垂直排列主轴垂直) -->
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </article>
+  </body>
+</html>

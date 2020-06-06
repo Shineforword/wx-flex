@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>主轴基准尺寸的定义</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      article {
+        border: solid 5px silver;
+        width: 400px;
+        height: 500px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+      }
+      article div {
+        /* 主轴基准尺寸 控制主轴方向的基准尺寸大小 (主轴方向的尺寸大小会失效)*/
+        /* 这种单位的优先级高于主轴基准尺寸
+        min-width: ;
+        max-width: ;
+        max-height: ;
+        min-height: ;>主轴基准尺寸>普通尺寸 */
+        flex-basis: 100px;
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        background: blueviolet;
+        background-clip: content-box;
+        box-sizing: border-box;
+        border: solid 1px blueviolet;
+        color: white;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 排列方式不同主轴也是不同(水平排列主轴水平 垂直排列主轴垂直) -->
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex弹性布局</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        /* 布局方向: */
+        flex-direction: column;
+      }
+      main {
+        background: #dddddd;
+        flex: 1;
+      }
+      footer {
+        background: linear-gradient(to bottom, #f3f3f3, #dddddd, #f3f3f3);
+        height: 60px;
+        display: flex;
+      }
+      footer div {
+        flex: 1;
+        text-align: center;
+        line-height: 3em;
+        color: #555555;
+      }
+      footer div:nth-child(n + 2) {
+        border-left: solid 1px #cccccc;
+      }
+    </style>
+  </head>
+  <body>
+    <main>RMBB</main>
+    <footer>
+      <div>RMB1</div>
+      <div>RMB2</div>
+      <div>RMB3</div>
+      <div>RMB4</div>
+    </footer>
+  </body>
+</html>

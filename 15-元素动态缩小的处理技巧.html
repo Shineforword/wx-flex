@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素动态缩小的处理技巧</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      article {
+        border: solid 5px silver;
+        width: 400px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+      }
+      article div {
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        background: blueviolet;
+        background-clip: content-box;
+        box-sizing: border-box;
+        border: solid 1px blueviolet;
+        color: white;
+        font-size: 35px;
+      }
+      /*flex-shrink 0 不缩小 */
+      /*  */
+      article div:nth-child(1) {
+        flex-shrink: 1;
+      }
+      article div:nth-child(2) {
+        flex-shrink: 3;
+      }
+      article div:nth-child(3) {
+        flex-shrink: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 排列方式不同主轴也是不同(水平排列主轴水平 垂直排列主轴垂直) -->
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </article>
+  </body>
+</html>

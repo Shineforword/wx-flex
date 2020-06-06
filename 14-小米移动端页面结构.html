@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小米移动端页面结构</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    header {
+      height: 60px;
+      background: blueviolet;
+    }
+    main {
+      /* 可用空间 */
+      flex-grow: 1;
+      background: #cccccc;
+    }
+    footer {
+      height: 60px;
+      background: #383881;
+    }
+  </style>
+  <body>
+    <header></header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>

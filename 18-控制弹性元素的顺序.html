@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>弹性元素的组合定义</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      article {
+        border: solid 5px silver;
+        width: 400px;
+        height: 500px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      article div {
+        /* 第一个flex-grow 第二个flex-shrink 第三个基准尺寸flex-basics */
+        flex: 1;
+        height: 100px;
+        padding: 10px;
+        background: blueviolet;
+        background-clip: content-box;
+        box-sizing: border-box;
+        border: solid 1px blueviolet;
+        color: white;
+        font-size: 35px;
+      }
+      /* 数值越大越靠后 order*/
+      article div:nth-child(1) {
+        order: 1;
+      }
+      article div:nth-child(2) {
+        order: -1;
+      }
+      article div:nth-child(3) {
+        order: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 排列方式不同主轴也是不同(水平排列主轴水平 垂直排列主轴垂直) -->
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </article>
+  </body>
+</html>

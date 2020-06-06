@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>弹性元素方向</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      article {
+        border: solid 5px silver;
+        width: 300px;
+        display: flex;
+        /* 水平轴(左右) */
+        flex-direction: row;
+        /* 水平轴(右左) */
+        /* flex-direction: row-reverse; */
+        /* 垂直轴(上下)  */
+        /* flex-direction: column; */
+        /* 垂直轴(下上) */
+        flex-direction: column-reverse;
+
+        /* 换行(可反向) */
+        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+      }
+      article * {
+        width: 100px;
+        height: 100px;
+        background: blueviolet;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: border-box;
+        color: white;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>通用菜单</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      background: #f3f3f3;
+    }
+    footer {
+      background: #dddddd;
+      display: flex;
+      height: 50px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    footer section {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      border-right: solid 1px #cccccc;
+      justify-content: center;
+      align-items: center;
+    }
+    footer section:last-child {
+      border-right: none;
+    }
+  </style>
+  <body>
+    <main></main>
+    <footer>
+      <section>在线</section>
+      <section>下线</section>
+      <section>RMB</section>
+    </footer>
+  </body>
+</html>

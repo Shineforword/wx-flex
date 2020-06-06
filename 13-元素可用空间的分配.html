@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>弹性元素交叉轴控制</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      article {
+        border: solid 5px silver;
+        width: 550px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+      }
+      article * {
+        /* flex-grow: 1 平均分配 */
+        flex-grow: 1;
+        width: 100px;
+        height: 100px;
+        background: blueviolet;
+        padding: 10px;
+        box-sizing: border-box;
+        color: white;
+        font-size: 35px;
+      }
+      /* 可用空间分配 */
+      article div:nth-child(1) {
+        flex-grow: 0;
+      }
+      article div:nth-child(2) {
+        flex-grow: 4;
+      }
+      article div:nth-child(3) {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 排列方式不同主轴也是不同(水平排列主轴水平 垂直排列主轴垂直) -->
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </article>
+  </body>
+</html>
